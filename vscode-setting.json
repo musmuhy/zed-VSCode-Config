@@ -1,0 +1,70 @@
+// Place your key bindings in this file to override the defaults
+// IF CMD+W IS TO CLOSE TAB then surely there must be...
+//Move to your previous/ next Editor.
+[
+    {
+        "key": "cmd+k",
+        "command": "workbench.action.nextEditor",
+        
+    },
+    
+    {
+        "key": "cmd+j",
+        "command": "workbench.action.previousEditor",
+            
+    },
+//move active Editor left or right (usefull for Full-stack web dev).
+    {
+        "key": "cmd+ctrl+j",
+        "command": "moveActiveEditor",
+        "args": {
+            "to": "left"
+        }
+    },
+    {
+        "key": "cmd+ctrl+k",
+        "command": "moveActiveEditor",
+        "args": {
+            "to": "right"
+        }
+    },
+
+//VSCode Integerated Terminal Commands..
+ 
+{
+    "key": "cmd+n",
+    "command": "workbench.action.terminal.newInActiveWorkspace",
+    
+},
+//Half screeen Terminal..
+  {
+    "key": "cmd+enter",
+    "command": "workbench.action.terminal.toggleTerminal", //minimize terminal or mediumize terminal.
+ },
+//Full screen Terminal..
+ {
+    "key": "cmd+ctrl+enter",
+    "command": "workbench.action.toggleMaximizedPanel", //Full or mediumize
+    
+ },
+    {
+        "key": "cmd+d",
+        "command": "workbench.action.terminal.split", //splits
+        "when": "terminalFocus && terminalProcessSupported"
+    },
+    {
+        "key": "cmd+w",
+        "command": "workbench.action.terminal.kill",//kills each auto
+        "when": "terminalFocus"
+    },
+    {
+        "key": "cmd+k",
+        "command": "workbench.action.terminal.focusNextPane",  //Switching b/w terminal when split mode.. Ex.one for server another Git 
+        "when": "terminalFocus && terminalProcessSupported"
+    },
+    {
+        "key": "cmd+j",
+        "command": "workbench.action.terminal.focusPreviousPane", // same above just  Rightside
+        "when": "terminalFocus && terminalProcessSupported"
+    }
+]
